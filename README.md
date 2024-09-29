@@ -1,6 +1,7 @@
 # Synchronous Chat App
 
-![App Screenshot](./server/Screenshot 2024-09-29 181942.png)
+![App Screenshot](./server/Screenshot_2024-09-29.png)
+
 
 ## Welcome to the Synchronous Chat App!
 
