@@ -1,8 +1,5 @@
 # Synchronous Chat App
 
-![App Screenshot](./server/Screenshot_2024-09-29.png)
-
-
 ## Welcome to the Synchronous Chat App!
 
 Synchronous Chat App is a real-time chat application built with the MERN stack. It supports both direct messaging and group channels, making communication easy and fast. Users can create channels, send messages, and have an engaging chat experience.
