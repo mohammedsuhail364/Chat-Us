@@ -35,4 +35,4 @@ setupSocket(server);
 mongoose
     .connect('mongodb+srv://chatUs:suhail364@cluster0.jl7nkbn.mongodb.net/chatApp?retryWrites=true&w=majority&appName=Cluster0')
     .then(()=>console.log('Db connection successful'))
-    .catch((err)=>console.log(error));
+    .catch((err)=>console.log(err));
