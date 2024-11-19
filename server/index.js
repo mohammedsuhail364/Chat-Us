@@ -20,7 +20,7 @@ app.use(
     credentials: true, // Allows cookies and credentials to be sent
   })
 );
-app.get('/',(req,res)=>{
+app.get('/Chat-Us',(req,res)=>{
     res.send("<h1>Hello...</h1>")
 })
 app.use('/uploads/profiles',express.static('uploads/profiles'))
