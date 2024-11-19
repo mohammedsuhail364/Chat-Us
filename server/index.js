@@ -13,11 +13,13 @@ const app=express();
 const port=process.env.PORT || 3001;
 const databaseURL=process.env.DATABASE;
 
-app.use(cors({
-    origin:[process.env.ORIGIN],
-    methods:["GET","POST","PUT","PATCH","DELETE" ],
-    credentials:true,
-})) 
+app.use(
+  cors({
+    origin: ['http://localhost:5173', 'https://chat-us-juo5.onrender.com'], // Allow both local and production URLs
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+    credentials: true, // Allows cookies and credentials to be sent
+  })
+);
 app.get('/',(req,res)=>{
     res.send("<h1>Hello...</h1>")
 })
