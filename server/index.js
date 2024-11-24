@@ -25,7 +25,7 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
   credentials: true,
 }));
-app.get('/Chat-Us',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send("<h1>Hello...</h1>")
 })
 app.use('/uploads/profiles',express.static('uploads/profiles'))
