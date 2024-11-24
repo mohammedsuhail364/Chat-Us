@@ -15,7 +15,7 @@ const databaseURL=process.env.DATABASE;
 
 app.use(
   cors({
-    origin: ['http://localhost:5173', 'https://chat-us-juo5.onrender.com',"http://mohammedsuhail364.github.io/ChatApp/"], // Allow both local and production URLs
+    origin: ['http://localhost:5173', 'https://chat-us-juo5.onrender.com',"http://mohammedsuhail364.github.io"], // Allow both local and production URLs
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     credentials: true, // Allows cookies and credentials to be sent
   })
