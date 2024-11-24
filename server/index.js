@@ -13,13 +13,18 @@ const app=express();
 const port=process.env.PORT || 3001;
 const databaseURL=process.env.DATABASE;
 
-app.use(
-  cors({
-    origin: ['http://localhost:5173', 'https://chat-us-juo5.onrender.com',"http://mohammedsuhail364.github.io"], // Allow both local and production URLs
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
-    credentials: true, // Allows cookies and credentials to be sent
-  })
-);
+const allowedOrigins = ['http://localhost:5173', 'https://chat-us-juo5.onrender.com', 'http://mohammedsuhail364.github.io'];
+app.use(cors({
+  origin: (origin, callback) => {
+    if (allowedOrigins.includes(origin) || !origin) { // Allow Postman and server-side requests
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+  credentials: true,
+}));
 app.get('/Chat-Us',(req,res)=>{
     res.send("<h1>Hello...</h1>")
 })
