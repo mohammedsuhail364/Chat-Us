@@ -13,7 +13,7 @@ const app=express();
 const port=process.env.PORT || 3001;
 const databaseURL=process.env.DATABASE;
 
-const allowedOrigins = ['http://localhost:5173', 'https://chat-us-juo5.onrender.com', 'http://mohammedsuhail364.github.io'];
+const allowedOrigins = ['http://localhost:5173', 'https://chat-us-juo5.onrender.com', 'https://mohammedsuhail364.github.io'];
 app.use(cors({
   origin: (origin, callback) => {
     if (allowedOrigins.includes(origin) || !origin) { // Allow Postman and server-side requests
