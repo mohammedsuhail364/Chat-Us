@@ -4,7 +4,7 @@ import Channel from "./models/channelModel.js";
 const setupSocket = (server) => {
   const io = new SocketIoServer(server, {
     cors: {
-      origin:"http://localhost:5173",
+      origin:"https://mohammedsuhail364.github.io",
       methods: ["GET", "POST"],
       credentials: true,
     },
